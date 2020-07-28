@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6em;
+  margin: 0;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: green;
+}
+
+.container {
+  /* set width to percentage, because it will be responsive
+  with px it won't be */
+  /* 960px are widely used but they are not responsive */
+  width: 80%;
+  /* this will make the text to be in the middle */
+  margin: auto; 
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+}
+
+.clr {
+  clear: both;
+}
+
+.box-1 {
+  border: 3px solid grey;
+  padding: 20px;
+  /* 40 for top and bottom, and 60 for right and left */
+  margin: 40px 0;
+  /* padding: 20px;
+  margin: 40px 60px; usually: top right bottom left
+  border: 3px dotted grey; */
+
+  /* we can also set margin like this
+  margin: 20px 0;
+  which means there is no margin for right and left
+  but since we have .container class
+  we would still have margin auto applied */
+}
+
+/* this will only be applied to h1 within .box-1 class */
+.box-1 h1 {
+  font-family: Tahoma;
+  margin-bottom: 15px;
+}
+
+.box-2 {
+  border: 3px dotted #ccc;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.box-2 h1 {
+  margin-bottom: 15px;
+}
+
+.box-2 .paragraph {
+  margin-bottom: 20px;;
+}
+
+.categories {
+  border: 1px #ccc solid;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.categories h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.categories ul {
+  /* ul has default padding, apply padding 0 below to
+  zero it out */
+  padding: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.categories li {
+  padding-bottom: 6px;
+  border-bottom: 1px dotted #333;
+  list-style-image: url('./close.svg');
+}
+
+.my-form {
+  padding: 20px;
+}
+
+.my-form .form-group {
+  padding-bottom: 15px;
+}
+
+.my-form label {
+  display: block;
+}
+
+
+/* button also a type of input => that's why we need to
+specify which input we are applying the changes.
+That's why we write:  input[type="text"], .my-form textarea */
+.my-form input[type="text"], .my-form textarea {
+  /* padding to make the input fields look thicker */
+  padding: 6px;
+  /* width to be 100% of the container */
+  width:100%
+}
+
+.block {
+  float: left;
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  /* takes padding and border sizes and applies it to the width
+  which is 33.3 each. Without box-sizing, it would be messed up */
+  box-sizing: border-box;
+}
+
+/* !!! When you float stuff, you should clear it after */
+
+#main-block {
+  float: left;
+  width: 70%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+#sidebar {
+  float: right;
+  width: 30%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.p-box {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  position: relative;
+  background-image: url('./image.jpg');
+  background-position: 100px 200px;
+  background-repeat: no-repeat;
+  /* to center image horizontally and vertically */
+  background-position: center center;
+}
+
+/* to set position: absolute for the child element (in this case h1), we need
+to set the parent element (.p-box) to position: relative */
+.p-box h1 {
+  position: absolute;
+  top: 40px;
+  left: 200px;
+}
+
+/* with position fixed the element will be at the same spot on the 
+screen all the time */
+.fix-me{
+  position: fixed;
+  top: 400px;
+}
+
+.my-list li:first-child{
+  background: pink;
+}
+
+.my-list li:last-child{
+  background: lightblue;
+}
+
+.my-list li:nth-child(5){
+  background: lightgreen;
+}
+
+.my-list li:nth-child(even){
+  background: lightslategray;
+}
